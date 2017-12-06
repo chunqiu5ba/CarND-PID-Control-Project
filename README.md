@@ -5,21 +5,21 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## PID Controller
 
-* P: Proportional parameter computes an output proportinal to the set point(lane center), also called cross-track-error(cte). The vehcial will oscillates around the setpoint under P controller only.
+* P: Proportional parameter computes an output proportinal to the set point(lane center), also called cross-track-error(cte). The vehcial will oscillate around the setpoint under P controller only.
 
-* D: differential parameter computes the derivative of the cte over time period,it will smooth the oscillation effect caused by P  
+* D: differential parameter computes the derivative of the cte over a period of time, it will smooth the oscillation effect caused by P  
 
-* I: Integral parameter calculates the sum of the cte over time, and remove thisbias will help the set poiont could be reached. The source of this error could come from different sysmatic bias like steering drift.
+* I: Integral parameter calculates the sum of the cte over time, and remove this effect  will help the set poiont could be reached. The source of this error could come from different sysmatic bias like steering drift.
 
 ## Hyperparameter Tuning
 
-Steering PID paramenters are finalized at: P-0.05, I-0.007, D-2, after manually tuning. I stastarted with testing P first and leave I and D at zero, then increase D to keep the vechcle on the track, then adjusting I to keep the car more closer to the center lane. 
+Steering PID paramenters are finalized at: P-0.05, I-0.007, D-2 after manually tuning. I started with testing P first and leave I and D at zero, then increase D to keep the vehicle on the track, then adjusting I to keep the car more closer to the center lane. 
 
-Although suggeest by the project that the second PID controller could be implemeneted over the throttle, I didn't feel it helped alot. Throttle was set as a negtive correlation of the abosulte vaule of cte: the far way from center, the lower throttle, even brackes.
+Although suggested by the project that the second PID controller could be implemented over the throttle, I didn't feel it helped. In this program, throttle is controlled as a negative correlation of the absloute vaule of cte: the larger cte(far way from center), the lower throttle.
 
-## Thing to improve
+## Things to improve
 
-The vehicle can drive along the track at about 15 mph with my implementation, but the speed is not satisfied. Also the vehicle oscilation is still large. 
+The vehicle can drive along the track at about 15 mph with my implementation, but the speed is not satisfied. Also the vehicle oscillation is still large. 
 
 ## Dependencies
 
