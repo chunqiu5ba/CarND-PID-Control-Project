@@ -21,6 +21,8 @@ Although suggested by the project that the second PID controller could be implem
 
 The vehicle can drive along the track at about 15 mph with my implementation, but the speed is not satisfied. Also the vehicle oscillation is still large. 
 
+Video Link: https://youtu.be/gT9dxzSD-Js   
+
 ## Dependencies
 
 * cmake >= 3.5
